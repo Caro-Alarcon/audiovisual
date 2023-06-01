@@ -1,0 +1,23 @@
+<h1 class="my-5">Mostrando All Documentaryfilms</h1>
+
+<h5 class="text-danger" ><%= @documentaryfilms.count %></h5>
+<div class="my-5 row">
+
+    <% @documentaryfilms.each do |documentary| %>
+
+        <div class="mb-5 col">
+            <div class="card">
+                <h6>Id: <%= documentary.id %></h6>
+                <h5>Name: <%= documentary.name %></h5>
+                <h5>Director: <%= documentary.director %></h5>
+                <p>Synopsis: <%= documentary.synopsis %></p>
+            </div>
+        </div>
+
+    <% end%>
+
+    <div class="my-5">
+    <%= link_to "Agregar Documentaryfilm", documentaryfilms_new_path, class: "btn btn-secondary" %>
+    </div>
+    
+ </div>
